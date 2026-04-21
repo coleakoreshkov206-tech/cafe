@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!-- Страница бронирования — 6-я страница сайта -->
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Забронировать стол в кафе «Уютный уголок»">
+    <meta name="author" content="Кафе Уютный уголок">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <link rel="icon" href="../images/icon.png">
+
+    <title>Кафе «Уютный уголок» — Бронирование</title>
+</head>
+<body>
+
+    <header>
+        <img class="logo" src="../images/icon.png" alt="Логотип кафе">
+        <nav id="main-nav">
+            <a href="../index.html">Главная</a>
+            <a href="../pages/about.html">О нас</a>
+            <a href="../pages/menu.html">Меню</a>
+            <a href="../pages/atmosfera.html">Атмосфера</a>
+            <a href="../pages/rezerv.html">Бронирование</a>
+            <a href="../pages/contacte.html">Контакты</a>
+        </nav>
+        <i id="hamburger" onclick="mobileMenu()" class="fa-solid fa-bars"></i>
+    </header>
+
+    <main>
+        <section>
+            <h1 class="centered">Забронировать стол</h1>
+
+            <!-- Якорная навигация -->
+            <nav class="anchor-nav" aria-label="Разделы">
+                <a href="#rezerv-form">Форма брони</a>
+                <a href="#rules">Условия</a>
+                <a href="#schema">Схема зала</a>
+            </nav>
+
+            <div id="rezerv-form" class="rezerv-wrap">
+                <div class="cform">
+                    <h2 class="centered">Оформить бронирование</h2>
+
+                    <div class="form-group">
+                        <label for="rname">Имя и фамилия *</label>
+                        <input type="text" id="rname" placeholder="Иван Иванов" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="rphone">Телефон *</label>
+                        <input type="tel" id="rphone" placeholder="+373 XX XXX XXX" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="rdate">Дата *</label>
+                        <input type="date" id="rdate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="rtime">Время *</label>
+                        <input type="time" id="rtime" min="08:00" max="21:00" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="rguests">Количество гостей *</label>
+                        <select id="rguests" required>
+                            <option value="">— Выберите —</option>
+                            <option value="1">1 гость</option>
+                            <option value="2">2 гостя</option>
+                            <option value="3-4">3–4 гостя</option>
+                            <option value="5-6">5–6 гостей</option>
+                            <option value="7+">7 и более</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="roccasion">Повод (необязательно)</label>
+                        <select id="roccasion">
+                            <option value="">— Без особого повода —</option>
+                            <option value="birthday">День рождения</option>
+                            <option value="anniversary">Годовщина</option>
+                            <option value="business">Деловая встреча</option>
+                            <option value="other">Другое</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="rcomment">Пожелания</label>
+                        <textarea id="rcomment" rows="3" placeholder="Особые пожелания, аллергии, предпочтения по месту..."></textarea>
+                    </div>
+
+                    <button type="button" class="btn-submit" onclick="submitRezerv()">Подтвердить бронирование</button>
+                    <div id="rezerv-msg" class="form-feedback" aria-live="polite"></div>
+                </div>
+            </div>
+
+            <!-- Условия бронирования -->
+            <article id="rules" class="info-block" style="margin-top:30px;">
+                <h2>Условия бронирования</h2>
+                <ul class="info-list">
+                    <li>Стол резервируется на 15 минут — просим приходить вовремя.</li>
+                    <li>Для группы от 7 человек просим звонить нам напрямую.</li>
+                    <li>Бронирование на вечер пятницы и субботы рекомендуем делать за 2–3 дня.</li>
+                    <li>Отмена брони — не позднее чем за 2 часа до визита.</li>
+                </ul>
+            </article>
+
+            <!-- Интерактивная схема зала (динамически генерируется JS) -->
+            <article id="schema" style="margin-top:30px;">
+                <h2 class="centered">Схема зала</h2>
+                <p class="centered">Нажмите на стол, чтобы узнать о нём подробнее.</p>
+                <div id="table-schema"></div>
+                <div id="table-info" class="table-info-box" style="display:none;"></div>
+            </article>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <span>Кафе «Уютный уголок» © 2026</span>
+            <a href="https://tripadvisor.com" target="_blank" rel="noopener">Отзывы на TripAdvisor</a>
+            <span>г. Бельцы, ул. Пушкина, 14</span>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

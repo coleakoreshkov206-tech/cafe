@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<!-- Главная страница сайта кафе «Уютный уголок» -->
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <!-- Метатег viewport для адаптивности -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Кафе «Уютный уголок» — уютное место для завтраков, обедов и встреч в Бельцах">
+    <meta name="keywords" content="кафе, Бельцы, завтрак, обед, десерты, кофе">
+    <meta name="author" content="Кафе Уютный уголок">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <link rel="icon" href="images/icon.png">
+
+    <title>Кафе «Уютный уголок»</title>
+</head>
+<body>
+
+    <!-- Шапка с навигацией -->
+    <header>
+        <img class="logo" src="images/icon.png" alt="Логотип кафе Уютный уголок">
+        <nav id="main-nav">
+            <a href="index.html">Главная</a>
+            <a href="pages/about.html">О нас</a>
+            <a href="pages/menu.html">Меню</a>
+            <a href="pages/atmosfera.html">Атмосфера</a>
+            <a href="pages/rezerv.html">Бронирование</a>
+            <a href="pages/contacte.html">Контакты</a>
+        </nav>
+        <i id="hamburger" onclick="mobileMenu()" class="fa-solid fa-bars" aria-label="Меню"></i>
+    </header>
+
+    <main>
+        <!-- Hero-секция -->
+        <section id="index" aria-label="Главный экран">
+            <div class="index-info">
+                <h1 id="hero-title">Кафе «Уютный уголок»</h1>
+                <p class="hero-sub" id="hero-sub">Место, где хочется остаться</p>
+                <a href="pages/menu.html" class="link-index">Смотреть меню</a>
+                <!-- Якорная ссылка на секцию ниже -->
+                <a href="#highlights" class="link-index link-ghost">Узнать больше ↓</a>
+            </div>
+        </section>
+
+        <!-- Секция «Почему мы» -->
+        <section id="highlights" class="highlights-section">
+            <h2 class="centered">Почему выбирают нас</h2>
+            <div class="cards-row">
+                <div class="highlight-card">
+                    <span class="h-icon">☕</span>
+                    <h3>Свежий кофе</h3>
+                    <p>Зерно локальной обжарки, три метода приготовления.</p>
+                </div>
+                <div class="highlight-card">
+                    <span class="h-icon">🍰</span>
+                    <h3>Выпечка каждый день</h3>
+                    <p>Все десерты готовятся вручную каждое утро.</p>
+                </div>
+                <div class="highlight-card">
+                    <span class="h-icon">🌿</span>
+                    <h3>Свежие продукты</h3>
+                    <p>Местные фермеры, сезонное меню без полуфабрикатов.</p>
+                </div>
+                <div class="highlight-card">
+                    <span class="h-icon">🎵</span>
+                    <h3>Живая музыка</h3>
+                    <p>Каждую субботу с 19:00 — джаз и инди.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция с аудио -->
+        <section class="audio-section" aria-label="Атмосфера кафе">
+            <h2 class="centered">Атмосфера в звуке</h2>
+            <p class="centered">Послушайте джазовую музыку, которая звучит у нас каждый день.</p>
+            <div class="audio-wrap">
+                <!-- Элемент audio согласно требованиям -->
+                <audio controls id="cafe-audio">
+                    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" type="audio/mpeg">
+                    Ваш браузер не поддерживает элемент audio. <a href="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3">Скачать</a>
+                </audio>
+                <p class="note"><em>* Демонстрационный трек. Авторские права принадлежат правообладателям.</em></p>
+            </div>
+        </section>
+
+        <!-- Интерактивный счётчик -->
+        <section class="stats-section">
+            <h2 class="centered">Кафе в цифрах</h2>
+            <div class="stats-row">
+                <div class="stat-card">
+                    <span class="stat-num" data-target="2015">0</span>
+                    <span class="stat-label">Год открытия</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-num" data-target="40">0</span>
+                    <span class="stat-label">Мест в зале</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-num" data-target="12">0</span>
+                    <span class="stat-label">Человек в команде</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-num" data-target="50">0</span>
+                    <span class="stat-label">Блюд в меню</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Калькулятор заказа (динамический контент) -->
+        <section class="calc-section" id="calculator">
+            <h2 class="centered">Рассчитать заказ</h2>
+            <p class="centered">Выберите позиции и узнайте примерную стоимость.</p>
+            <div id="calc-container">
+                <div class="calc-items" id="calc-items"></div>
+                <div class="calc-total">
+                    Итого: <strong id="calc-sum">0</strong> леев
+                </div>
+                <button class="btn-main" onclick="resetCalc()">Сбросить</button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Подвал -->
+    <footer>
+        <div class="footer-inner">
+            <span>Кафе «Уютный уголок» © 2026</span>
+            <!-- Внешняя ссылка -->
+            <a href="https://tripadvisor.com" target="_blank" rel="noopener">Отзывы на TripAdvisor</a>
+            <span>г. Бельцы, ул. Пушкина, 14</span>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

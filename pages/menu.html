@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<!-- Страница меню кафе — содержит таблицу цен и видео -->
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Меню кафе «Уютный уголок» — завтраки, обеды, десерты, напитки">
+    <meta name="author" content="Кафе Уютный уголок">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <link rel="icon" href="../images/icon.png">
+
+    <title>Кафе «Уютный уголок» — Меню</title>
+</head>
+<body>
+
+    <!-- Шапка -->
+    <header>
+        <img class="logo" src="../images/icon.png" alt="Логотип кафе">
+        <nav id="main-nav">
+            <a href="../index.html">Главная</a>
+            <a href="../pages/about.html">О нас</a>
+            <a href="../pages/menu.html">Меню</a>
+            <a href="../pages/atmosfera.html">Атмосфера</a>
+            <a href="../pages/rezerv.html">Бронирование</a>
+            <a href="../pages/contacte.html">Контакты</a>
+        </nav>
+        <i id="hamburger" onclick="mobileMenu()" class="fa-solid fa-bars"></i>
+    </header>
+
+    <main>
+        <section>
+            <h1 class="centered">Наше меню</h1>
+
+            <!-- Якорная навигация по разделам меню -->
+            <nav class="anchor-nav" aria-label="Разделы меню">
+                <a href="#zavtrak">Завтраки</a>
+                <a href="#obed">Обеды</a>
+                <a href="#desert">Десерты</a>
+                <a href="#napitki">Напитки</a>
+                <a href="#prices">Цены</a>
+                <a href="#video-menu">Видео</a>
+            </nav>
+
+            <!-- Завтраки -->
+            <article class="loc" id="zavtrak">
+                <h2>Завтраки</h2>
+                <img src="../images/zavtrak.jpg" alt="Завтраки в кафе Уютный уголок — яйца, тосты, каши">
+                <p>
+                    Завтраки подаём с 8:00 до 12:00, готовим каждую порцию с нуля. В меню: яичница с фермерскими яйцами и зеленью, авокадо-тосты на заквасочном хлебе, овсяная каша с сезонными ягодами и французские омлеты с начинкой на выбор. По субботам и воскресеньям — расширенный бранч с живой музыкой с 11:00.
+                </p>
+            </article>
+
+            <!-- Обеды -->
+            <article class="loc" id="obed">
+                <h2>Обеды и горячее</h2>
+                <img src="../images/obed.jpg" alt="Обеденные блюда в кафе — суп, паста, рыба">
+                <p>
+                    Обеденное меню меняется каждый сезон. Сейчас в карте: крем-суп из тыквы, паста с лесными грибами и трюфельным маслом, запечённый лосось с овощами на гриле и домашние котлеты с картофельным пюре. Каждый день шеф готовит блюдо дня — порция ограничена.
+                </p>
+            </article>
+
+            <!-- Десерты -->
+            <article class="loc" id="desert">
+                <h2>Десерты и выпечка</h2>
+                <img src="../images/desert.jpg" alt="Десерты кафе — тарт, чизкейк, медовик, круассаны">
+                <p>
+                    Каждое утро кондитер готовит свежую партию: шоколадный тарт с малиной, нью-йоркский чизкейк, медовик по бабушкиному рецепту, круассаны с миндальным кремом и сезонные пироги. Все десерты — без ароматизаторов и консервантов. По заказу готовим торты на праздник.
+                </p>
+            </article>
+
+            <!-- Напитки -->
+            <article class="loc" id="napitki">
+                <h2>Напитки</h2>
+                <img src="../images/napitki.jpg" alt="Напитки кафе — кофе, лимонад, соки">
+                <p>
+                    Кофейная карта: эспрессо, капучино, флэт уайт, фильтр-кофе и сезонные авторские напитки. Зерно обжаривается локально раз в неделю. Также: чай из местных трав, свежевыжатые соки, домашние лимонады и горячий шоколад. Летом — холодный brew-кофе, матча-лате и смузи.
+                </p>
+            </article>
+
+            <!-- Таблица цен (требование критериев) -->
+            <article id="prices">
+                <h2 class="centered">Прайс-лист</h2>
+                <table class="price-table">
+                    <caption>Цены на основные позиции меню (леи)</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Категория</th>
+                            <th scope="col">Блюдо / напиток</th>
+                            <th scope="col">Вес / объём</th>
+                            <th scope="col">Цена (MDL)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="3">Завтраки</td>
+                            <td>Авокадо-тост с яйцом</td>
+                            <td>250 г</td>
+                            <td>89</td>
+                        </tr>
+                        <tr>
+                            <td>Французский омлет</td>
+                            <td>180 г</td>
+                            <td>72</td>
+                        </tr>
+                        <tr>
+                            <td>Овсяная каша с ягодами</td>
+                            <td>300 г</td>
+                            <td>55</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="3">Обеды</td>
+                            <td>Крем-суп из тыквы</td>
+                            <td>350 мл</td>
+                            <td>65</td>
+                        </tr>
+                        <tr>
+                            <td>Паста с грибами</td>
+                            <td>280 г</td>
+                            <td>115</td>
+                        </tr>
+                        <tr>
+                            <td>Лосось на гриле</td>
+                            <td>200 г</td>
+                            <td>145</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="3">Десерты</td>
+                            <td>Шоколадный тарт</td>
+                            <td>120 г</td>
+                            <td>68</td>
+                        </tr>
+                        <tr>
+                            <td>Чизкейк нью-йоркский</td>
+                            <td>150 г</td>
+                            <td>75</td>
+                        </tr>
+                        <tr>
+                            <td>Круассан с миндалём</td>
+                            <td>90 г</td>
+                            <td>42</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="4">Напитки</td>
+                            <td>Эспрессо</td>
+                            <td>30 мл</td>
+                            <td>28</td>
+                        </tr>
+                        <tr>
+                            <td>Капучино</td>
+                            <td>200 мл</td>
+                            <td>45</td>
+                        </tr>
+                        <tr>
+                            <td>Домашний лимонад</td>
+                            <td>400 мл</td>
+                            <td>52</td>
+                        </tr>
+                        <tr>
+                            <td>Горячий шоколад</td>
+                            <td>250 мл</td>
+                            <td>58</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="4">* Цены актуальны на 2026 год. Блюдо дня — по запросу у официанта.</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </article>
+
+            <!-- Видео (элемент video согласно требованиям) -->
+            <article id="video-menu" class="video-block">
+                <h2 class="centered">Как мы готовим</h2>
+                <p class="centered">Короткое видео о нашей кухне и атмосфере.</p>
+                <div class="video-wrap">
+                    <!-- Нативный элемент video -->
+                    <video controls poster="../images/desert.jpg" class="cafe-video">
+                        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                        Ваш браузер не поддерживает элемент video. <a href="https://www.w3schools.com/html/mov_bbb.mp4">Скачать видео</a>
+                    </video>
+                    <p class="note"><em>* Демонстрационное видео. Авторские права принадлежат правообладателям.</em></p>
+                </div>
+
+                <!-- Дополнительно: YouTube iframe -->
+                <h3 class="centered" style="margin-top:28px;">Видеообзор кафе</h3>
+                <iframe class="vframe"
+                    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                    title="Видеообзор кафе Уютный уголок"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </article>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <span>Кафе «Уютный уголок» © 2026</span>
+            <a href="https://tripadvisor.com" target="_blank" rel="noopener">Отзывы на TripAdvisor</a>
+            <span>г. Бельцы, ул. Пушкина, 14</span>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

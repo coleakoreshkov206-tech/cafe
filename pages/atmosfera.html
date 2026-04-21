@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!-- Страница «Атмосфера» -->
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Атмосфера кафе «Уютный уголок» — интерьер, музыка, мероприятия">
+    <meta name="author" content="Кафе Уютный уголок">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <link rel="icon" href="../images/icon.png">
+
+    <title>Кафе «Уютный уголок» — Атмосфера</title>
+</head>
+<body>
+
+    <header>
+        <img class="logo" src="../images/icon.png" alt="Логотип кафе">
+        <nav id="main-nav">
+            <a href="../index.html">Главная</a>
+            <a href="../pages/about.html">О нас</a>
+            <a href="../pages/menu.html">Меню</a>
+            <a href="../pages/atmosfera.html">Атмосфера</a>
+            <a href="../pages/rezerv.html">Бронирование</a>
+            <a href="../pages/contacte.html">Контакты</a>
+        </nav>
+        <i id="hamburger" onclick="mobileMenu()" class="fa-solid fa-bars"></i>
+    </header>
+
+    <main>
+        <section class="more-info">
+            <h1 class="centered">Атмосфера</h1>
+
+            <!-- Якорная навигация -->
+            <nav class="anchor-nav" aria-label="Разделы страницы">
+                <a href="#interior">Интерьер</a>
+                <a href="#events">Мероприятия</a>
+                <a href="#reviews">Отзывы гостей</a>
+                <a href="#video-atm">Видео</a>
+            </nav>
+
+            <div id="interior">
+                <div class="more-info-hero">
+                    <h2>Место, где хочется остаться</h2>
+                    <p>Мы создавали интерьер так, чтобы каждый гость чувствовал себя как дома. Мягкий свет, деревянные столики, живые растения и ненавязчивая музыка — всё это складывается в особое настроение, которое наши гости называют «кафе-ощущением».</p>
+                </div>
+
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>🌿 Интерьер</h3>
+                        <p>Скандинавский стиль с живыми растениями. Натуральное дерево, мягкие диваны у окна и уголки для уединённой работы.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>🎵 Музыка</h3>
+                        <p>Джаз и инди по будням. Живая музыка каждую субботу с 19:00 — местные музыканты и студенты консерватории.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>📶 Для работы</h3>
+                        <p>Быстрый Wi-Fi, розетки у каждого стола, тихая зона без телефонных разговоров — идеально для фрилансеров.</p>
+                    </div>
+                </div>
+            </div>
+
+            <article id="events" class="info-block">
+                <h2>Мероприятия</h2>
+                <p>Раз в месяц проводим тематические вечера и мастер-классы — записаться можно через форму на странице контактов.</p>
+                <ul class="info-list">
+                    <li>Мастер-класс по латте-арту — каждое первое воскресенье месяца</li>
+                    <li>Книжный клуб — каждую третью пятницу в 19:00</li>
+                    <li>Бранч с живой музыкой — каждую субботу и воскресенье с 11:00</li>
+                    <li>Дегустация сезонного меню — раз в квартал</li>
+                </ul>
+            </article>
+
+            <!-- Динамические отзывы гостей -->
+            <article id="reviews">
+                <h2 class="centered">Отзывы наших гостей</h2>
+                <div id="reviews-container"></div>
+                <button class="btn-main" onclick="loadMoreReviews()" id="load-more-btn">Показать ещё</button>
+            </article>
+
+            <article id="video-atm">
+                <h2 class="centered">Видеообзор кафе</h2>
+                <iframe class="vframe"
+                    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                    title="Видеообзор кафе Уютный уголок"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </article>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <span>Кафе «Уютный уголок» © 2026</span>
+            <a href="https://tripadvisor.com" target="_blank" rel="noopener">Отзывы на TripAdvisor</a>
+            <span>г. Бельцы, ул. Пушкина, 14</span>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
